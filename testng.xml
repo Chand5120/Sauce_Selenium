@@ -1,0 +1,11 @@
+<suite name="Sauce Demo">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="Login Page">
+        <classes>
+            <class name="org.saucedemo.loginpage.FullTest"/>
+        </classes>
+    </test>
+</suite>
