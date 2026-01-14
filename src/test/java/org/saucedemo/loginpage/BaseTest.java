@@ -1,5 +1,6 @@
 package org.saucedemo.loginpage;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
@@ -10,8 +11,12 @@ public class BaseTest {
 
     @BeforeTest
     public void setup() {
-        this.driver = new FirefoxDriver();
-        this.driver.manage().window().maximize();
+        WebDriverManager.firefoxdriver().setup();
+
+        FirefoxOptions options = new FirefoxOptions();
+        options.addArguments("--headless");
+
+        driver = new FirefoxDriver(options);
     }
 
     @AfterTest
@@ -20,4 +25,5 @@ public class BaseTest {
             driver.quit();
         }
     }
+
 }
