@@ -1,6 +1,7 @@
 package org.saucedemo.loginpage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
@@ -27,3 +28,4 @@ public class BaseTest {
     }
 
 }
+
